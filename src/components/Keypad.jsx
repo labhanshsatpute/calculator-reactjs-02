@@ -49,6 +49,9 @@ class Keypad extends React.Component {
             else if (Value.indexOf("/") == 0) {
                 alert("Invalid Enter");
             }
+            else if (Value == "") {
+                alert(" Enter Something ");
+            }
             else {
                 let result = eval(Value);
                 this.setState({DisplayValue: result});
@@ -73,21 +76,15 @@ class Keypad extends React.Component {
             <React.Fragment>
                 <div className="card w-auto bg-dark m-1 border-dark rounded-0">
                     <div className="card-body text-right">
-                        <h1 className="text-white"> {this.state.DisplayValue} </h1>
+                        <h1 className="text-white"> {this.state.DisplayValue} :</h1>
                     </div>
                 </div>
                 <div className="container-fluid text-center">
                     <div className="row w-auto">
-                    <div className="col-3 p-1">
-                            <button className="btn rounded-0 btn-lg w-100 btn-info" onClick={() => this.ButtonClick("(","number")}>(</button>
-                        </div>
-                        <div className="col-3 p-1">
-                            <button className="btn rounded-0 btn-lg w-100 btn-info" onClick={() => this.ButtonClick(")","number")}>)</button>
-                        </div>
-                        <div className="col-3 p-1">
+                        <div className="col-6 p-1">
                             <button className="btn rounded-0 btn-lg w-100 btn-danger" onClick={this.AllClear}>AC</button>
                         </div>
-                        <div className="col-3 p-1">
+                        <div className="col-6 p-1">
                             <button className="btn rounded-0 btn-lg w-100 btn-danger" onClick={this.DeleteLastDigit}>C</button>
                         </div>
                         <div className="col-3 p-1">

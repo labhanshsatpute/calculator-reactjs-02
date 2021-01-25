@@ -30,7 +30,7 @@ button.btn-lg {
 
 @media (max-width: 768px) {
   div.calculatorCard {
-    margin: 0px 50px;
+    margin: 0px 10px;
     width: auto;
   }
 }
