@@ -8,10 +8,11 @@ const App =()=> {
 
     return (
         <React.Fragment>
-            <Navbar/>
             <main>
                 <section className="d-flex justify-content-center align-items-center">
+                    <br/>
                     <SimpleCalculator/>
+                    <br/>
                 </section>
             </main>
         </React.Fragment>
